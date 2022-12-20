@@ -1,0 +1,24 @@
+create database projeto;
+use projeto;
+
+create table pessoa(
+	 nome varchar(60),
+     email varchar(30),
+     cpf varchar(15) primary key,
+     idade int,
+     cidade varchar(20),
+	 usuario varchar(60),
+     senha varchar(15)
+);
+
+create table Dog(
+nome varchar(30), 
+raca varchar(30),
+idade int,
+sexo varchar(10)
+
+);
+
+
+
+select* from dog ;
