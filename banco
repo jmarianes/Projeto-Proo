@@ -3,22 +3,26 @@ use projeto;
 
 create table pessoa(
 	 nome varchar(60),
-     email varchar(30),
+     email varchar(30) unique,
      cpf varchar(15) primary key,
      idade int,
      cidade varchar(20),
-	 usuario varchar(60),
+	 usuario varchar(60) unique,
      senha varchar(15)
 );
 
-create table Dog(
-nome varchar(30), 
-raca varchar(30),
-idade int,
-sexo varchar(10)
+create table entrar(
+	usuario varchar(60),
+    senha varchar(15),
+    foreign key (usuario) references pessoa(cpf),
+    foreign key (senha) references pessoa (cpf)
+);
 
+create table Dog(
+	nome varchar(30), 
+	raca varchar(30),
+	idade int,
+	sexo varchar(10)
 );
 
 
-
-select* from dog ;
